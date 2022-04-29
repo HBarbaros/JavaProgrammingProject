@@ -10,9 +10,9 @@ public class ThrowKeyword2 {
 
         //throw new InterruptedException();
 
-        //System.out.println("Hello World"); // it's going to not acceptable after throw method
+        //System.out.println("Hello World"); // it's going to be not acceptable after throw method
 
-        //throw new Rectangle(5, 7);
+        // throw new Rectangle(5, 7);
 
 
 
