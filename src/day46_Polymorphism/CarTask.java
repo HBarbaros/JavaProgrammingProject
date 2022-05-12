@@ -39,26 +39,26 @@ public class CarTask {
 
         System.out.println("eligibleForRecall = " + eligibleForRecall);
 
-        System.out.println();
+        System.out.println("-------------------------------------------------------------------------------");
 
-        double maxMiles = cars[0].miles;
-        double minMiles = cars[0].miles;
-        Car highestMileage = null;
-        Car lowestMileage = null;
+        //1.2 Write a program that can display the car that has the highest mileage
+        //1.3 Write a program that can display the car that has the lowest mileage
 
-        for (int i = 0; i < cars.length; i++) {
-            if (cars[i].miles > maxMiles) {
-                maxMiles = cars[i].miles;
-                highestMileage = cars[i];
+        Car carWithHighestMileage = cars[0],
+                carWithLowesMileage = cars[0];
+
+        for (Car eachCar : cars) {
+            if (eachCar.miles > carWithHighestMileage.miles){
+                carWithHighestMileage = eachCar;
             }
-            if (cars[i].miles < minMiles) {
-                minMiles = cars[i].miles;
-                lowestMileage = cars[i];
+
+            if (eachCar.miles < carWithLowesMileage.miles){
+                carWithLowesMileage = eachCar;
             }
+
         }
 
-        System.out.println("highestMileage = " + highestMileage);
-        System.out.println("lowestMileage = " + lowestMileage);
-
+        System.out.println(carWithHighestMileage);
+        System.out.println(carWithLowesMileage);
     }
 }

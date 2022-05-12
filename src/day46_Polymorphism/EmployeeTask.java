@@ -43,45 +43,28 @@ public class EmployeeTask {
             }
         }
 
-        double minSalary = Double.MAX_VALUE;
-        double maxSalary = Double.MIN_VALUE;
+        System.out.println("------------------------------------------------------------------------------");
 
-        Tester testerMaxSalary=null;
-        Tester testerMinSalary=null;
+        // 2.4 which tester has the maximum salary?
+        // 2.5 which developer has the maximum salary?
 
-        for (Tester tester : testers) {
-            if(tester.getSalary()>maxSalary){
-                maxSalary= tester.getSalary();
-                testerMaxSalary=tester;
-            }
-            if(tester.getSalary()<minSalary){
-                minSalary= tester.getSalary();
-                testerMinSalary=tester;
+        Tester testerWithMaxSalary = testers.get(0);
+        Developer developerWithMaxSalary = developers.get(0);
+
+        for (Tester eachEmployee: testers){
+            if (eachEmployee.getSalary() > testerWithMaxSalary.getSalary()){
+                testerWithMaxSalary = eachEmployee;
             }
         }
 
-        minSalary=Double.MAX_VALUE;
-        maxSalary=Double.MIN_VALUE;
-
-        Developer developerMaxSalary=null;
-        Developer developerMinSalary=null;
-
-        for (Developer developer : developers) {
-            if(developer.getSalary()>maxSalary){
-                maxSalary= developer.getSalary();
-                developerMaxSalary=developer;
-            }
-            if(developer.getSalary()<minSalary){
-                minSalary= developer.getSalary();
-                developerMinSalary=developer;
+        for (Developer eachDeveloper : developers){
+            if (eachDeveloper.getSalary() > developerWithMaxSalary.getSalary()){
+                developerWithMaxSalary = eachDeveloper;
             }
         }
 
-        System.out.println("testerMaxSalary = " + testerMaxSalary);
-        System.out.println("testerMinSalary = " + testerMinSalary);
-        System.out.println("developerMaxSalary = " + developerMaxSalary);
-        System.out.println("developerMinSalary = " + developerMinSalary);
-
+        System.out.println("testerWithMaxSalary = " + testerWithMaxSalary);
+        System.out.println("developerWithMaxSalary = " + developerWithMaxSalary);
 
 
 

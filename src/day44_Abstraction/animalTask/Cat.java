@@ -11,6 +11,10 @@ public final class Cat extends Animal implements Playable{
         System.out.println(getName() + " eats Biryani");
     }
 
+    public void meow(){
+        System.out.println(getName() + " is meowing");
+    }
+
     @Override
     public void play() {
         System.out.println(getName() + " is playing with ball");
